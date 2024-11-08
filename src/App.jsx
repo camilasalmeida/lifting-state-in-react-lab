@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>Your Burger Stacker App</h1>
+      <h1>Your Burger Stacker App 🍔</h1>
       <section>
       <IngredientList availableIngredients={availableIngredients} addToBurger={addToBurger} />
         <BurgerStack stack={ stack } removeFromBurger={ removeFromBurger } />
