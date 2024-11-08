@@ -1,22 +1,17 @@
 
-
-
-const IngredientList = (props) => {
-
-    return   (  
+const IngredientList = ({ availableIngredients, addToBurger }) => {
+  return (
     <ul>
-        {props.availableIngredients.map((ingredient, index) => {
-            return <li key={index} style={{ backgroundColor: ingredient.color }}>
-                {ingredient.name}
-            <button onClick={() => props.addToBurger(ingredient)}>+</button>               
-            </li>;
-        })}
+      {availableIngredients.map((ingredient, index) => {
+        return (
+          <li key={index} style={{ backgroundColor: ingredient.color }}>
+            {ingredient.name}
+            <button onClick={() => addToBurger(ingredient)}>+</button>
+          </li>
+        );
+      })}
     </ul>
-    )
-}
+  );
+};
 
 export default IngredientList;
-
-
-
-//The arrow function allows you to pass arguments to the function when the button is clicked.
