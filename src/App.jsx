@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import "./App.css";
 import BurgerStack from './components/BurgerStack.jsx' 
 import IngredientList from './components/IngredientsList.jsx' 
@@ -21,8 +19,7 @@ export const availableIngredients = [
   { name: "Cheddar Cheese", color: "#FDE18B" },
   { name: "Swiss Cheese", color: "#F1E1A8" },
 ];
-//--------------------------------------------------------------------------\\
-
+//-----------------------------------------------------------------------------------\\
 const App = () => {
   const [stack, setStack] = useState([]);
 
@@ -33,14 +30,12 @@ const App = () => {
     console.log(updatedStack);
   };
 
-
   const removeFromBurger = (removeIngredient) => {
     console.log('Removing this ingredient from the burger: ', removeIngredient);
     const updatedStackAfterRemoving = stack.filter(ingredient => ingredient !== removeIngredient)                                   // Use the filter() method to create a new array that excludes the ingredient we are removing.
     setStack(updatedStackAfterRemoving);
   }
-
-
+  
   return (
     <main>
       <h1>Your Burger Stacker App 🍔</h1>
